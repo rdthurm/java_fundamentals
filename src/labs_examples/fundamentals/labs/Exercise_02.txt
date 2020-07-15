@@ -22,7 +22,7 @@ Initializing git folder
             git remote add practice https://github.com/rdthurm/git_practice.git
 
         d. Push commit file to Github
-            git push practice master
+            git push -u practice master
         e. Practice the following git flow until you feel comfortable:
             i.   Create or modify file
             ii.  Add file(s)
