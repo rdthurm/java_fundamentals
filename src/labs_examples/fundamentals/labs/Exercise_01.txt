@@ -14,16 +14,16 @@ Fundamentals Exercise 1: CLI
          c. list the contents of the folder
             ls -al
      5. Inside of folder Terminal_testing, create a new folder
-        mkdir new
+        mkdir new_folder
      6. Copy a file from Terminal_testing to the new folder
-        cp one.txt ./new
+        cp one.txt ./new_folder
      7. Move a different file from Terminal_testing to the new folder
-        mv two.txt ./new
+        mv two.txt ./new_folder
      8. Demonstrate removing:
          a. A file
             rm three.txt
          b. A folder
-            rm -r new
+            rm -r new_folder
      9. CHALLENGE:
          a. Use $ vim to write some text inside a file
          b. Use $ cat print contents of file
