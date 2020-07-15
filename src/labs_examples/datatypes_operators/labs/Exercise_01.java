@@ -17,7 +17,11 @@ public class Exercise_01 {
     public static void main(String[] args) {
 
         // write code here
-
+        int x = 20;
+        double y = 2345.67;
+        float z = 123.45f;
+        char a = 'A';
+        System.out.println(x + "\n" + y + "\n" + z + "\n" + a);
     }
 }
 

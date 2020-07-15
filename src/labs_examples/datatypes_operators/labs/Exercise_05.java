@@ -18,7 +18,24 @@ class LogicalOperators {
         }
 
         // write your code below
-
+        if (a & b){
+            System.out.println("a and b are true");
+        }
+        if (a && b){
+            System.out.println("a and b are true");
+        }
+        if (a | b){
+            System.out.println("a or b is true");
+        }
+        if (a || b){
+            System.out.println("a and b are true");
+        }
+        if (a ^ b){
+            System.out.println("Either a or b is true, but not both");
+        }
+        if (a != b){
+            System.out.println("a does not equal b");
+        }
     }
 
 }

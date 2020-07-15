@@ -24,7 +24,7 @@ public class Exercise_05 {
         // please demonstrate the use of any other method that is available to us in the String class
         // for example, replace(), substring(), contains(), indexOf() etc
         boolean c = str.contains("he");
-        
+
         System.out.println(x);
         System.out.println(b);
         System.out.println(c);

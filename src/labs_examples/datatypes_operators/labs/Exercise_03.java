@@ -11,7 +11,9 @@ class ArithmeticOperators {
     public static void main(String[] args) {
 
         // write your code below
-
+        int x = 100;
+        int y = (x / 2) + (x * 2) - (x % 33);
+        System.out.println(y);
     }
 
 }
