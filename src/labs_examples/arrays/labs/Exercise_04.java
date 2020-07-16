@@ -1,5 +1,7 @@
 package labs_examples.arrays.labs;
 
+import java.util.ArrayList;
+
 /**
  *  Irregular Arrays
  *
@@ -9,5 +11,20 @@ package labs_examples.arrays.labs;
  */
 
 public class Exercise_04 {
-
+    public static void main(String[] args) {
+        int[][] wonka = new int[3][5];
+        int x = wonka.length;
+        for (int i = 0; i < wonka.length; i++){
+            for (int j = 0; j < wonka[i].length; j++){
+                wonka[i][j] = x;
+                x *= wonka.length;
+            }
+        }
+        for (int[] row : wonka) {
+            for (int col : row) {
+                System.out.print(col + " ");
+            }
+            System.out.println();
+        }
+    }
 }
