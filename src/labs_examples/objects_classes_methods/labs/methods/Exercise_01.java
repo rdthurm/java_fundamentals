@@ -15,6 +15,7 @@ public class Exercise_01 {
         System.out.println(yearsToSeconds(25));
         int[] arr = {4, 5, 6};
         System.out.println(varargs(arr));
+
     }
 
 
