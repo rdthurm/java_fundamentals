@@ -3,7 +3,8 @@ package labs_examples.objects_classes_methods.labs.oop.A_inheritance;
 /**
  * Why does the output print in the order it does?
  *
- * You answer:
+ * You answer: The superclass constructors are called first because you can't create a child class without the parent's
+ * attributes created first.
  *
  */
 

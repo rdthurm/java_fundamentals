@@ -1,7 +1,8 @@
 
 Without running the code below, please tell me what it will print.
 
-
+Similar to the last exercise, I haven't seen cases like "Parent c = new Child();" where Parent and Child don't match
+like normal. So I'm unsure but my guess is that this program will print "Child called" since c will be a new Child object.
 
 public class InheritanceTest
 {

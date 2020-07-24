@@ -1,7 +1,10 @@
 
 Without running the code below, please tell me what will print. Why?
 
+"Parent called"
+"Child called"
 
+It will print this because it must run the Parent constructor before constructing the Child.
 
 
 public class InheritanceTest
