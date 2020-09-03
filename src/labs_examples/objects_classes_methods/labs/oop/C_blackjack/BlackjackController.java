@@ -1,5 +1,6 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
+import java.lang.reflect.Array;
 import java.util.Scanner;
 
 public class BlackjackController {
@@ -7,6 +8,4 @@ public class BlackjackController {
         BlackjackGame game = new BlackjackGame();
         game.playBlackjack();
     }
-
-
 }
