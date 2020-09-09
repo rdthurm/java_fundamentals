@@ -1,7 +1,7 @@
 package labs_examples.conditions_loops.examples;
 
 /*
-   Use nested loops to find factors of numbers
+   Use nested loops to find factors of numbers.txt
    between 2 and 100.
 */
 class FindFac {

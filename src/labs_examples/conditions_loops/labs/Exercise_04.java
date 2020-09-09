@@ -1,9 +1,9 @@
 package labs_examples.conditions_loops.labs;
 
 /**
- * Conditions and Loops Exercise 4: Even numbers
+ * Conditions and Loops Exercise 4: Even numbers.txt
  *
- *      Using a "for-loop", print out all even numbers from 1-100.
+ *      Using a "for-loop", print out all even numbers.txt from 1-100.
  *
  */
 

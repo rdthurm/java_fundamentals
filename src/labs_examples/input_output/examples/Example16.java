@@ -1,6 +1,6 @@
 package labs_examples.input_output.examples;
 
-/* This program averages a list of numbers entered
+/* This program averages a list of numbers.txt entered
    by the user.  */
 
 import java.io.BufferedReader;
@@ -20,7 +20,7 @@ class AvgNums {
         double sum = 0.0;
         double avg, t;
 
-        System.out.print("How many numbers will you enter: ");
+        System.out.print("How many numbers.txt will you enter: ");
 
         str = br.readLine();
 

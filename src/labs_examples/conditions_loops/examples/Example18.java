@@ -6,7 +6,7 @@ class Empty3 {
         int i;
         int sum = 0;
 
-        // sum the numbers through 5
+        // sum the numbers.txt through 5
         for(i = 1; i <= 10000; sum += i++) ;
 
         System.out.println("Sum is " + sum);

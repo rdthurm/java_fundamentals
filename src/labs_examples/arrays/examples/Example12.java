@@ -45,7 +45,7 @@ class QDemo {
 
 
         System.out.println("Using bigQ to store the alphabet.");
-        // put some numbers into bigQ
+        // put some numbers.txt into bigQ
         for(i=0; i < 26; i++)
             bigQ.put((char) ('A' + i));
 
