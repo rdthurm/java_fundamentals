@@ -1,15 +1,13 @@
 package labs_examples.packages.labs.one;
-import labs_examples.packages.labs.two.BankTwo;
+
 public class BankOne {
-    public static void main(String[] args) {
 
+    void bankOneName(){
+        System.out.println("Bank one name");
     }
 
-    public void add(){
-        System.out.println("Add to bank one");
-    }
-
-    protected void report(){
+    protected void reportBankOne(){
         System.out.println("Bank one balance");
     }
+
 }

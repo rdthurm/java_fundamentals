@@ -14,7 +14,7 @@ public class payBalancer {
         Wallet Rachel = new Wallet("Rachel");
 
 
-        Luke.buy(200);
+        Luke.buy(202);
         Dillon.buy(12);
         Riley.buy(123);
 
@@ -33,7 +33,7 @@ public class payBalancer {
         double top;
         double bottom;
         boolean go = true;
-        int counter = 7;
+        int counter = Wallet.numOfWallets;
         double pay;
         //sorts lowest to highest:
         Collections.sort(Wallet.arrayList, (p1, p2) -> Double.valueOf(p1.amountSpent).compareTo(p2.amountSpent));
