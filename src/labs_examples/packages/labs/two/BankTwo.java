@@ -12,7 +12,7 @@ public class BankTwo extends BankOne {
     void reportBothBanks(){
         System.out.println("Bank two balance");
         reportBankOne(); // this works since BankTwo extends BankOne, where this method is declared
-        bankOneName(); // this won't work because bankOneName() is not accessible
+        // bankOneName(); // this won't work because bankOneName() is not accessible
     }
 
 }
