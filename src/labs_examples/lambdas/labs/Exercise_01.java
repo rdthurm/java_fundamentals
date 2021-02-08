@@ -1,5 +1,11 @@
 package labs_examples.lambdas.labs;
 
+import java.io.SequenceInputStream;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.function.Consumer;
+import java.util.function.*;
+
 /**
  * Lambdas Exercise 1:
  *
@@ -23,3 +29,51 @@ package labs_examples.lambdas.labs;
  *
  *
  */
+
+@FunctionalInterface
+interface InterfaceOne {
+    public void method();
+}
+
+@FunctionalInterface
+interface InterfaceTwo {
+    public int method(int x);
+}
+
+@FunctionalInterface
+interface InterfaceThree {
+    public int method(String x, String y);
+}
+
+class Controller {
+    public static void main(String[] args) {
+        InterfaceOne oneLambda = () -> System.out.println("InterfaceOne Lambda.");
+        InterfaceOne oneAIC = new InterfaceOne() {
+            @Override
+            public void method() {
+                System.out.println("InterfaceOne AIC.");
+            }
+        };
+
+        InterfaceTwo twoLambda = (x) -> x * x;
+        InterfaceTwo twoAIC = new InterfaceTwo() {
+            @Override
+            public int method(int x) {
+                return (x/2) + 7;
+            }
+        };
+
+        InterfaceThree threeLambda = (x, y) -> x.length() + y.length();
+        InterfaceThree threeAIC = new InterfaceThree() {
+            @Override
+            public int method(String x, String y) {
+                return x.length() - y.length();
+            }
+        };
+
+        DoubleFunction<Double> radius = (circumference -> circumference/Math.PI);
+        System.out.println(radius.apply(1000));
+        IntToDoubleFunction heightInchesToFeet = (height -> (double) height/12);
+        System.out.println(heightInchesToFeet.applyAsDouble(68));
+    }
+}

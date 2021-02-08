@@ -29,7 +29,4 @@ public class Player {
         this.name = name;
     }
 
-
-
-
 }

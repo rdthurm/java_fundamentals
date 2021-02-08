@@ -1,8 +1,8 @@
 package labs_examples.objects_classes_methods.labs.oop.C_blackjack;
 
 import java.util.Scanner;
-
-public class BlackjackGame {
+/*
+public class PlayBlackjack {
     public static int gamesPlayed;
     public static int computerWins;
     public static int playerWins;
@@ -34,10 +34,10 @@ public class BlackjackGame {
             }
             int won = 0;
             Deck deck = new Deck();
-            deck.deal(player);
-            deck.deal(player);
-            deck.deal(computer);
-            deck.deal(computer);
+            deck.dealBlackjack(player);
+            deck.dealBlackjack(player);
+            deck.dealBlackjack(computer);
+            deck.dealBlackjack(computer);
             System.out.println("Your cards: " + player.hand.buildCards());
             System.out.println("Your total: " + player.hand.handScore());
             System.out.println("Dealer upcard: " + computer.hand.cards.get(0).cardValue);
@@ -45,7 +45,7 @@ public class BlackjackGame {
             while (player.hand.handScore() <= 21) {
                 String move = scanner.next();
                 if (move.equals("y")) {
-                    deck.deal(player);
+                    deck.dealBlackjack(player);
                     System.out.println("Your cards are: " + player.hand.buildCards());
                     System.out.println("And your total is: " + player.hand.handScore());
                     System.out.println("Do you want another card?");
@@ -54,7 +54,7 @@ public class BlackjackGame {
                 }
             }
             while (computer.computerAI()) {
-                deck.deal(computer);
+                deck.dealBlackjack(computer);
             }
             int yourTotal = player.hand.handScore();
             int computerTotal = computer.hand.handScore();
@@ -99,3 +99,4 @@ public class BlackjackGame {
         }
     }
 }
+*/
