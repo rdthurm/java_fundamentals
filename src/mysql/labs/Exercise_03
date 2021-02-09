@@ -5,15 +5,53 @@
 *   Now that you have your air travel database all set up and populated, please demonstrate how to:
 *
 *       1.) Query all flights on a specific day
+            SELECT * FROM Flight WHERE Flight.TakeoffDate = "02/09/2021";
 *       2.) Query all flights between two specific cities on a specific day
+            SELECT * FROM Flight f
+            WHERE f.TakeoffDate = "02/07/2021"
+            AND f.StartPort = "2"
+            AND f.EndPort = "6";
 *       3.) Query all passengers on a specific flight between two specific cities today
+            SELECT p.PassengerID, p.FirstName, p.LastName, f.StartPort, f.EndPort
+            FROM Passenger p
+            JOIN Ticket t USING (PassengerID)
+            JOIN Flight f USING (FlightID)
+            WHERE f.StartPort = "1"
+            AND f.EndPort = "2"
+            AND f.Date = "2021-02-08";
 *       4.) Query the flight information for a specific passenger on a specific flight
+            The way I have my database set up, there is no flight information regarding a specific passenger.
+            There IS ticket information that is specific to one flight and one passenger, such as the seat number.
+            The query for that would simply be:
+            SELECT t.SeatNumber FROM Ticket t
+            WHERE t.PassengerID = "18" AND t.FlightID = "1000";
 *       5.) Query the passenger information for a specific user on a specific flight yesterday
+            SELECT * from Passenger p
+            JOIN Ticket t USING (PassengerID)
+            JOIN Flight f USING (FlightID)
+            WHERE f.FlightID = "1005"
+            AND p.PassengerID = "17";
 *       6.) Query the number of flights between two specific cities this week, month, and year
+            SELECT count(f.FlightID) as Num_Flights from Flight f
+            WHERE f.StartPort = "1" AND f.EndPort = "8"
+            AND f.Date BETWEEN "2020-02-08" AND "2021-02-09"; # Adjust first date to change range
 *       7.) Query the number of passengers that travelled between two specific cities today, this week, month and year
+            SELECT count(p.PassengerID) as Num_Passengers from Passenger p
+            JOIN Ticket t USING (PassengerID)
+            JOIN Flight f USING (FlightID)
+            WHERE f.StartPort = "1" AND f.EndPort = "8"
+            AND f.Date BETWEEN "2020-01-01" AND "2021-02-28"; # Adjust first date to change range
 *       8.) Insert records for new flights between airports
+            INSERT INTO Flight (PlaneID, AirlineID, StartPort, EndPort, Date) VALUES ("15", "5", "1", "5", "2021-03-09");
 *       9.) Insert records for new tickets and passengers on specific flights
+            INSERT INTO Ticket (PassengerID, FlightID, Price, Class, SeatNumber) VALUES ("12", "1017", "400", "Business", "E6");
+            INSERT INTO Ticket (PassengerID, FlightID, Price, Class, SeatNumber) VALUES ("10", "1017", "800", "First Class", "B1");
 *       10.) Update meal preference (or something similar) for a specific passenger on a specific flight
+            UPDATE Passenger
+            SET PrefersWindow = '1'
+            WHERE PassengerID = '9';
+
+
 *       Bonus: Have some fun - get creative - what else can you do? Flex those SQL muscles and show us what
 *           you've got! :)
 *
